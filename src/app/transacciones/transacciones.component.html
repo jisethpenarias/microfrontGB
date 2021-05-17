@@ -265,6 +265,13 @@
     }
   }
 </style>
-<app-navigation usuario={{usuario}}></app-navigation>
 
-
+<div class="content" role="main">
+  <div class="customDiv">
+    <mat-card class="custom" *ngFor="let kuenta of cuentas;">
+      <mat-card-title> {{ kuenta.nombre }}	</mat-card-title>
+      <mat-card-subtitle>	{{ kuenta.cuentaNumero }} </mat-card-subtitle>
+      <mat-card-content><b>Saldo:</b> {{ kuenta.saldo }} </mat-card-content>
+    </mat-card>
+  </div>
+</div>

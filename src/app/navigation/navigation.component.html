@@ -1,11 +1,12 @@
 <div class="toolbar" role="banner">
   <span>Cuentas</span>
     <div class="spacer"></div>
-      <nav>
-        <a href="administrador">Administrador</a>
-        <a class="user" href="transacciones">Transacciones</a>
-      </nav>
+    <nav>
+      <a href="administrador">Administrador</a>
+      <a class="user" routerLink="/transacciones" routerLinkActive="active">Consulta Saldo</a>
+    </nav>
     <p class="username">
       {{usuario}}
     </p>
 </div>
+<router-outlet></router-outlet>
