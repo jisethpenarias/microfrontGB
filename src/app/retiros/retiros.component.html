@@ -1,0 +1,22 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<mat-card class="custom">
+  <mat-card-title> {{ cuentaNombre }}	</mat-card-title>
+  <mat-card-subtitle><b>Saldo:</b> {{disponible}} </mat-card-subtitle>
+  <mat-card-content>
+    <form (ngSubmit)="retirar()">
+      <mat-form-field>
+        <mat-label>Valor del retiro:</mat-label>
+        <input matInput type="number" placeholder="ingrese valor retiro"
+        [(ngModel)]="valorRetiro"  [formControl]="valorRetiroControl">
+        <mat-error *ngIf="valorRetiroControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <button class="button" type="submit">Retirar</button>
+    </form>
+  </mat-card-content>
+
+</mat-card>
+

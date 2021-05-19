@@ -18,16 +18,20 @@ export class TransaccionesComponent implements OnInit {
     {
       "nombre": "CDT",
       "cuentaNumero": "xxxxxxxxx20",
-      "saldo": 100000
+      "saldo": 99999
     },
     {
       "nombre": "Cuenta Corriente",
       "cuentaNumero": "xxxxxxx7789",
-      "saldo": 100000
+      "saldo": 88888
     }
   ]
   constructor(
     private route: ActivatedRoute) { }
+
+  retirar(): void {
+    console.log("retirando")
+  }
 
   ngOnInit(): void {
   }

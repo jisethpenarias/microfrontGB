@@ -272,6 +272,12 @@
       <mat-card-title> {{ kuenta.nombre }}	</mat-card-title>
       <mat-card-subtitle>	{{ kuenta.cuentaNumero }} </mat-card-subtitle>
       <mat-card-content><b>Saldo:</b> {{ kuenta.saldo }} </mat-card-content>
+      <mat-card-actions>
+        <button [routerLink]="['/retiros', kuenta.saldo, kuenta.nombre]" routerLinkActive="active" mat-icon-button title="Retirar/Consignar" aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>paid</mat-icon>
+        </button>
+      </mat-card-actions>
+
     </mat-card>
   </div>
 </div>
